@@ -3,13 +3,12 @@ const app = express()
 
 const port = process.env.PORT || 80
 
-app.use('/home', express.static(__dirname + '/index.html'));
-
-app.get("/",(req, res) =>{
-    res.json({
-        message: "Hello Word"
-    })
-})
+app.use('/', 
+    express.static(
+        './index.html'
+        )
+    
+)
 
 app.listen(port, ()=>{
 
